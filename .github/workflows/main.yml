@@ -19,7 +19,7 @@ jobs:
 
     - name: Deploy via SSH
       run: |
-        ssh -o StrictHostKeyChecking=no -i private_key.pem ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} << 'EOF'
+        ssh -o StrictHostKeyChecking=no -i private_key.pem ${{ secrets.EC2_USER }}@54.147.155.215${{ secrets.EC2_HOST }} << 'EOF'
           cd /home/ec2-user/app
           git pull origin main
           npm install
